@@ -1,5 +1,5 @@
 class Sum_Activation(nn.Module):
-    def __init__(self, activations, init_weights='uniform'):
+    def __init__(self, activations):
         super().__init__()
         
         self.activations = nn.ModuleList(activations)
