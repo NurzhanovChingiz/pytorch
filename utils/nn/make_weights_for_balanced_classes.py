@@ -2,7 +2,6 @@ import numpy as np
 def make_weights_for_balanced_classes(classid):
     """
     From https://gist.github.com/ogvalt/59bda57ec014512e61fb2b16e4911f61
-
     """
     weight_per_class=np.bincount(classid)
     N=sum(weight_per_class)
