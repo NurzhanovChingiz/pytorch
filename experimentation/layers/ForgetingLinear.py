@@ -39,7 +39,7 @@ class ForgettingLinear(nn.Linear):
         device, dtype = w.device, w.dtype
 
         idx = torch.randperm(num_w, device=device)[:num_sel]
-        # Have 3 choice forget, overestimate and random, for  similar to human memory
+        # Have 3 choice forget, random and overestimate for similar to human memory
         choices = torch.randint(0, 3, (num_sel,), device=device)
 
         new_vals = torch.zeros(num_sel, dtype=dtype, device=device)
